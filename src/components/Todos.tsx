@@ -1,10 +1,8 @@
-function Todos() {
+const Todos: React.FC<{items: string[]}> = (props) => {
   return (
     <div>
       <ul>
-        <li>Learn React</li>
-        <li>Learn Typescript</li>
-        <li>Learn MongoDB</li>
+      {props.items.map((task) => <li key={task}>{task}</li>)}
       </ul>
     </div>
   );
